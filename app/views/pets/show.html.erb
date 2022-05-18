@@ -1,0 +1,11 @@
+<p><%= link_to "Back to the list", pets_path %> </p>
+<h1><%= @pet.name %> <small>the <%= @pet.species %></small></h1>
+<p>
+  Found at <mark><%= @pet.address %></mark>
+  on <%= @pet.found_on.strftime("%b %d") %>
+</p>
+<p>
+  <%= link_to "Pet found!", pet_path(@pet), method: :delete, "data-confirm": "You did?! Great!" %>
+  -
+  <%= link_to "Edit", edit_pet_path(@pet) %>
+</p>
